@@ -6,3 +6,4 @@ A basic practice of Javascript with ES6, ES7 and React.
 
 ## Deploy project
 * npm run build
+* npm run start
