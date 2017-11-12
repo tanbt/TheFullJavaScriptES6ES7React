@@ -67,4 +67,5 @@ lion.hello();
 Animal.rock();
 
 let harry = new Wizard("Harri porter", "House", "Owl");
-console.log(harry);
+harry.pet_name = "More pet";
+console.log(harry, harry.info());
