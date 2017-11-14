@@ -69,3 +69,30 @@ Animal.rock();
 let harry = new Wizard("Harri porter", "House", "Owl");
 harry.pet_name = "More pet";
 console.log(harry, harry.info());
+
+///////////// DATA STRUCTURE ////////////
+let aSet = new Set();
+aSet.add(3);
+aSet.add("a string");
+aSet.add({x: 123, y: 456});
+
+let aSetArray = new Set([1,2,"array element"]);
+console.log(aSet, points);
+
+let myMap = new Map();
+let k1 = "string key";
+let k2 = {a: 'key'};
+let k3 = () => { console.log("This is a function key.") };
+
+myMap.set(k1, 'value of string key');
+myMap.set(k2, 'value of object key');
+myMap.set(k3, 'value of funcion key');
+
+let numArr = [[1, 'one'], [2, 'two']]
+let arrMap = new Map(numArr);
+
+for (let [key,value] of arrMap.entries()) {
+	console.log(`${key} to ${value}`);
+}
+
+import {MyClosure} from "./myclosure";
