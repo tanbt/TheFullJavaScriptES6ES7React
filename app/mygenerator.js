@@ -21,3 +21,20 @@ let countGen = countMaker();
 // console.log(countGen.next().value);
 // console.log(countGen.next().value);
 // console.log(countGen.next().value);
+
+function* idMaker() {
+    var index = 0;
+    while (true) {
+        index++;
+        let reset = yield index;
+        if (reset) {
+            index = 0;
+        }
+    }
+}
+
+var gen = idMaker();
+
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next(true).value); // 1
