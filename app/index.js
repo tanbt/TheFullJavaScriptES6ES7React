@@ -100,4 +100,5 @@ for (let [key, value] of arrMap.entries()) {
 
 //import { MyClosure } from "./myclosure";
 //import {} from "./mygenerator";
-import {} from "./promise";
+//import {} from "./promise";
+import {} from "./fetch";
