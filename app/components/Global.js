@@ -10,12 +10,15 @@ class Global extends Component {
     }
 
     search() {
-        console.log(this.state.query);
+        const BASE_URL = 'https://www.googleapis.com/books/v1/volumes?q='
+        fetch(`${BASE_URL}${this.state.query}`, {method: 'GET'})
+            .then(res => res.json())
+            .then(json => console.log(json));
     }
 
     render() {
         return (
-            <div className="global">
+            <div className="Global">
                 <h2>Book Explorer!</h2>
                 <FormGroup>
                     <InputGroup>
