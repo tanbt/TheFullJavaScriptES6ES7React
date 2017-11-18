@@ -10,13 +10,13 @@ class Gallery extends Component {
                     console.log(index, item);
                     let {title, imageLinks, infoLink} = item.volumeInfo;
                     return (
-                        <div id={index}>
+                        <a id={index} className="book-item" href={infoLink} target="_blank">
                         
                             <img src={imageLinks !== undefined ? imageLinks.thumbnail : blankImgUrl} 
-                            alt={title} />
+                            alt={title} className="book-image" />
 
-                            {title}
-                        </div>
+                            <div className="book-title">{title}</div>
+                        </a>
                     )
                 })
                 }
